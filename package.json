@@ -1,6 +1,6 @@
 {
   "name": "wisp-brunch",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "Adds Wisp - Clojure-like Lisp - (https://github.com/Gozala/wisp) support to Brunch.",
   "author": "Domingo E. Savoretti (http://sandy98.ods.org/)",
   "homepage": "https://github.com/sandy98/wisp-brunch",
@@ -13,7 +13,7 @@
     "prepublish": "rm -rf lib && coffee --output lib/ src/"
   },
   "dependencies": {
-    "wisp": ">=0.6.4"
+    "wisp": ">=0.10.0"
   },
   "devDependencies": {}
 }

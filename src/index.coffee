@@ -1,5 +1,4 @@
-transpile = require('wisp/lib/engine/node').transpile
-
+compile = require('wisp/compiler').compile
 
 module.exports = class WispCompiler
   brunchPlugin: yes
@@ -11,7 +10,9 @@ module.exports = class WispCompiler
 
   compile: (data, path, callback) ->
     try
-      return result = transpile data
+      res = compile(data, {'source-uri': path})
+      result =
+        data: res['code']
     catch err
       error = err
     finally
